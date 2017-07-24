@@ -1,0 +1,65 @@
+.body{
+
+	background-color: black;
+	color: white;
+}
+
+
+
+.nytlogo {
+
+	background-image: url("file:///C:/Users/Josh/AppData/Local/Temp/Temp1_project-02.zip/project-02/assets/images/nyt-logo.svg");
+	background-color: black;
+
+}
+
+.pic1 {
+	background-image: url("https://static01.nyt.com/images/2017/07/25/world/24USBriefing-Poland/24USBriefing-Poland-superJumbo.jpg");
+	background-size: 400px 400px;
+	color: white;
+	font-size: 15px;
+	text-align: center;
+	padding-top: 300px;
+    width: 400px;
+    height: 100px;
+   }
+
+.pic2 {
+	background-image: url("https://static01.nyt.com/images/2017/07/24/nyregion/24NYTODAY1/24NYTODAY1-superJumbo.jpg");
+	background-size: 400px 400px;
+	color: white;
+	font-size: 15px;
+	text-align: center;
+	padding-top: 300px;
+    width: 400px;
+    height: 100px;
+}
+
+.pic3 {
+	background-image: url("https://static01.nyt.com/images/2017/07/24/us/24California-Today-usc2/24California-Today-usc2-superJumbo.jpg");
+	background-size: 400px 400px;
+	color: white;
+	font-size: 15px;
+	text-align: center;
+	padding-top: 300px;
+    width: 400px;
+    height: 100px;
+}
+
+.pic4 {
+	background-image: url("https://static01.nyt.com/images/2017/07/24/us/24SANCTIONS1/24SANCTIONS1-superJumbo.jpg");
+	background-size: 400px 400px;
+	color: white;
+	font-size: 15px;
+	text-align: center;
+	padding-top: 300px;
+    width: 400px;
+    height: 100px;
+}
+
+.piccontainer {
+
+	display: flex;
+	flex-direction: row;
+
+}
