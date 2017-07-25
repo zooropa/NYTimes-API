@@ -1,16 +1,22 @@
-.body{
+body{
 
-	background-color: black;
-	
+	background-color: black;	
 }
 
-
+header{
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 30px;
+}
 
 .nytlogo {
-
-	background-image: url("file:///C:/Users/Josh/AppData/Local/Temp/Temp1_project-02.zip/project-02/assets/images/nyt-logo.svg");
+	
 	background-color: black;
 
+}
+
+.menu{
+	padding: 70px;
 }
 
 .pic1 {
@@ -166,3 +172,14 @@
 
 }
 
+footer{
+	color: white;
+}
+
+@media only screen and (min-width: 300px){
+
+	.pic1 .pic2 .pic3 .pic4 .pic5 .pic6 .pic7 .pic8 .pic9 .pic10 .pic11 .pic {
+		display: flex;
+		flex-direction: column;
+	} 
+}
