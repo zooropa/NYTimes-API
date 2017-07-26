@@ -1,34 +1,6 @@
-
-function click(){
-
-
-	var ourRequest = new XMLHttpRequest ();
-    var url = "https://api.nytimes.com/svc/topstories/v2/food.json";
-
-    ourRequest.open('GET', 'https://api.nytimes.com/svc/topstories/v2/food.json' );
-
-    url += '?' + $.param({
-    'api-key': "bc26c8e91bf445e388e87441a3b3219d"
-    });
-
-    $.ajax({
-    url: url,
-    method: 'GET',
-
-    }).done(function(result) {
-    console.log(result);
-    }).fail(function(err) {
-    throw err;
-
-    });
-
-};
-
-// SHOVAL'S CODE
-
-
 function apiget(){
     var choice = $('#dropDown').val();
+    //NY Times API (1) --- START ---
     var url = "https://api.nytimes.com/svc/topstories/v2/"+choice+".json";
     console.log("DEBUG: " + url);
     url += '?' + $.param({
@@ -40,6 +12,8 @@ function apiget(){
     }).done(function(result) {
      
       console.log(result);
+      // NY Times API (1) --- END ---
+
 
       // Clear previous articles before adding new ones 
       $("#piccontainer")["0"].innerHTML = "";
@@ -52,10 +26,10 @@ function apiget(){
           $("#piccontainer")["0"].innerHTML += "<div class='pic'"+ style +">"+ abstract +"</div>"
         }
       }
-
+      // NY Times API (2) --- START ---
     }).fail(function(err) {
       throw err;
     });
-    
+    // NY Times API (2) --- END ---
 
 }

@@ -27,7 +27,7 @@ header{
 	flex-wrap: wrap;
 }
 .pic {
-	background-size: 300px 300px;
+	background-size: 400px 300px;
 	color: white;
 	font-size: 15px;
 	text-align: left;
@@ -39,11 +39,12 @@ header{
 
 footer{
 	color: white;
+	padding: 10px;
 }
 
-@media only screen and (min-width: 300px){
+@media only screen and (max-width: 400px){
 
-	.pic1 .pic2 .pic3 .pic4 .pic5 .pic6 .pic7 .pic8 .pic9 .pic10 .pic11 .pic {
+	#piccontainer {
 		display: flex;
 		flex-direction: column;
 	} 
