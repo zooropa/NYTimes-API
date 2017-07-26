@@ -1,34 +1,4 @@
 
- 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
- 
-gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(concat('all.js'))    
-    .pipe(gulp.dest('./css'));
-});
- 
-gulp.task('sass:watch', function () {
-  gulp.watch('./sass/**/*.scss', ['sass']);
-});
-
-
-// shoval's code
-gulp.task('to-sass', function () {
-  gulp.src('*.scss')
-  .pipe(sass())
-     .pipe(concat('style.css'))
-        .pipe(uglifycss())
-        .pipe(gulp.dest('.'));   
-});
-
-
-
-
-
-
 function click(){
 
 
@@ -52,14 +22,15 @@ function click(){
 
     });
 
-});
+};
 
 // SHOVAL'S CODE
 
 
-function apiget(result){
+function apiget(){
     var choice = $('#dropDown').val();
     var url = "https://api.nytimes.com/svc/topstories/v2/"+choice+".json";
+    console.log("DEBUG: " + url);
     url += '?' + $.param({
       'api-key': "bc26c8e91bf445e388e87441a3b3219d"
     });
@@ -68,22 +39,19 @@ function apiget(result){
       method: 'GET',
     }).done(function(result) {
      
-        // remove any div with class of article
-        $( ".article" ).remove();
+      console.log(result);
 
-      var res = result.results;
-      var mul = result.results.multimedia;
-
-      for(i=0; i< res.length;i++){
-          
-          if (res[i].multimedia.length>0) {
-
-          var para = $("<div class='article'><p class='title'>"+res[i].title+"</p>"+"<a href="+res[i].url+">"+"<img src="+res[i].multimedia[0].url+">"+"</a>"+"<br>"+"<p class='abstract'>"+res[i].abstract+"</p>"+"</div>");
-
-          $("#artRes").append(para);
-
+      // Clear previous articles before adding new ones 
+      $("#piccontainer")["0"].innerHTML = "";
+      // Add a new div for each article
+      for (var i=0; i < result.results.length; i++) {
+        // only show articles that have an image
+        if(result.results[i].multimedia[4]) {
+          var style = " style='background-image: url(" + result.results[i].multimedia[4].url + ")'";
+          var abstract = result.results[i].abstract;
+          $("#piccontainer")["0"].innerHTML += "<div class='pic'"+ style +">"+ abstract +"</div>"
+        }
       }
-    }
 
     }).fail(function(err) {
       throw err;
