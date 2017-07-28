@@ -27,15 +27,23 @@ header{
 	flex-wrap: wrap;
 }
 .pic {
-	background-size: 400px 300px;
+	position:relative;
+	background-size: cover;
+	background-position: center;
 	color: white;
 	font-size: 15px;
 	text-align: left;
-	padding-top: 200px;
     width: 25%;
     min-width: 150px;
-    height: 100px;
+    height: 300px;
    }
+
+.pic > div {
+	position:absolute;
+	bottom:0;
+	background: rgba(0, 0, 0, .5);
+	padding: 0.5em;
+}
 
 footer{
 	color: white;
