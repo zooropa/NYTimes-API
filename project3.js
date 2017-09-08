@@ -58,16 +58,13 @@ a.className += "link";
 //a.appendChild(div);
 div.appendChild(a);
 
-div.style.width = "23%";
+//div.style.width = "23%";
 a.style.width = "100%";
 // div.style.height = "100px";
 div.style.backgroundImage = "url(" + res.results[i].multimedia[4].url+ ")";
 div.style.color = "white";
 
 document.getElementById("main").appendChild(div);
-
-
-
 
 }
 

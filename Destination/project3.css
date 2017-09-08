@@ -58,6 +58,7 @@ footer{
     flex-wrap: wrap;
 	color:blue;
 	padding: 50px;
+	width: 100%;
 
 }
 
@@ -69,9 +70,9 @@ footer{
 .article{
 	
 	height: 180px;
-	width: 500px;
-	max-width: 500px;
-	max-height: 1000px;
+	width: 23%;
+	/*max-width: 500px;
+	max-height: 1000px;*/
 	background-size: 100%;
 	background-repeat: no-repeat;
 	margin: 1%;
@@ -103,11 +104,14 @@ a.link{
 	top:3%;
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 600px){
 
-.article {
-		  display: flex;
+#main {
 		  flex-direction: column;
-		  border: 1px solid red;
+		  width: 100%;
 	     } 
+.article {
+
+	      width: 100%;
+}
 }
